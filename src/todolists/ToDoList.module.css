@@ -1,6 +1,16 @@
+.todolist-container {
+
+}
+.todolist-list {
+    padding: 10px;
+}
+
 .todo-item__task {
     background-color: #d2bebe;
     list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .todo-item__checkbox {
@@ -14,3 +24,4 @@
 .todo-item__task--active {
 
 }
+

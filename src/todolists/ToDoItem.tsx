@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
-import {ToDoItemType} from "./ToDoItemType";
-import {ToDoContext} from "./reducers/ToDoReducer";
-import {ToggleToDoItemAC} from "./Actions";
-import style from "./ToDoItem.module.css"
+import {ToDoItemType} from "../ToDoItemType";
+import {ToDoContext} from "../reducers/ToDoReducer";
+import {ToggleToDoItemAC} from "../Actions";
+import style from "./ToDoList.module.css"
 
 const ToDoItem: React.FC<ToDoItemType> = (item:ToDoItemType) => {
     const {dispatch} = useContext(ToDoContext)

@@ -1,7 +1,7 @@
 import React, {useReducer} from 'react';
 import {initialState, ToDoContext, ToDoReducer} from "./reducers/ToDoReducer";
 import ToDoInput from "./ToDoInput";
-import ToDoList from "./ToDoList";
+import ToDoList from "./todolists/ToDoList";
 
 const TodoApp: React.FC = () => {
 
