@@ -1,0 +1,16 @@
+.todo-item__task {
+    background-color: #d2bebe;
+    list-style-type: none;
+}
+
+.todo-item__checkbox {
+
+}
+
+.todo-item__task--done {
+    text-decoration: line-through;
+}
+
+.todo-item__task--active {
+
+}
