@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {ToDoContext} from "../reducers/ToDoReducer";
+import {ToDoContext} from "../reducers/todo-reducer";
 import ToDoItem from './ToDoItem';
 import {ToDoItemType} from "../ToDoItemType";
 

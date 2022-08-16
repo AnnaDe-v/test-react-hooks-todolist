@@ -1,0 +1,14 @@
+.to-do-input {
+    margin: auto;
+    max-width: 80%;
+}
+
+.to-do-input__value {
+    width: 97%;
+    padding: 10px;
+}
+
+.to-do-input__button {
+    width: 3%;
+    height: 39px;
+}

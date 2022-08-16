@@ -1,6 +1,8 @@
 import React, {useContext, useState} from 'react';
-import {ToDoContext} from "./reducers/ToDoReducer";
-import {AddToDoItemAC} from "./Actions";
+import {ToDoContext} from "../reducers/todo-reducer";
+import {AddToDoItemAC} from "../Actions";
+
+import style from './ToDoInput.module.css'
 
 const ToDoInput: React.FC = () => {
     const [inputValue, updateInputValue] = useState('')
@@ -26,22 +28,20 @@ const ToDoInput: React.FC = () => {
 
 
     return (
-        <div className='to-do-input'>
-            <div className='to-do-input-inputs'>
+        <div className={style['to-do-input']}>
                 <input
                     type="text"
-                    className='to-do-input-value'
+                    className={style['to-do-input__value']}
                     value={inputValue}
                     onChange={handleEditInputValue}
                     onKeyDown={handleEnterButton}
                 />
                 <button
-                    className='to-do-input-button'
+                    className={style['to-do-input__button']}
                     onClick={addNewToDoItem}
                 >
                     +
                 </button>
-            </div>
         </div>
     );
 };

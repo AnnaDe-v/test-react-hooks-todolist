@@ -2,7 +2,7 @@
 
 }
 .todolist-list {
-    padding: 10px;
+    padding: 0;
 }
 
 .todo-item__task {
@@ -11,10 +11,11 @@
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
+    font-size: 17px;
 }
 
 .todo-item__checkbox {
-
+    margin: 0 10px 0 10px;
 }
 
 .todo-item__task--done {

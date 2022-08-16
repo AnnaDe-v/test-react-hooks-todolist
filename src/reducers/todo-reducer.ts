@@ -42,7 +42,7 @@ export const ToggleToDoItemReducer = (state: ToDoState, action: ToggleToDoItemAc
 }
 
 
-export function ToDoReducer(state: ToDoState, action: ActionType):
+export function TodoReducer(state: ToDoState, action: ActionType):
     ToDoState {
     switch (action.type) {
         case ADD_TO_DO_ITEM:

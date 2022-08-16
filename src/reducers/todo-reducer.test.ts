@@ -1,5 +1,5 @@
 import {ToDoState} from "../ToDoState";
-import {ToDoReducer} from "./ToDoReducer";
+import {TodoReducer} from "./todo-reducer";
 import {ADD_TO_DO_ITEM, AddToDoItemAC} from "../Actions";
 import {v4 as uuidv4} from 'uuid';
 
@@ -28,7 +28,7 @@ test('Add new item success', () => {
 
     }
 
-    let newState = ToDoReducer(state, AddToDoItemAC('NEW ITEM'))
+    let newState = TodoReducer(state, AddToDoItemAC('NEW ITEM'))
 
     expect(newState).toBe(newState.ToDoItems.length)
 })
