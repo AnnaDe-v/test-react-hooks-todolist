@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {ToDoContext} from "../reducers/todo-reducer";
-import {AddToDoItemAC} from "../Actions";
+import {AddToDoItemAC} from "../reducers/Actions";
 
 import style from './ToDoInput.module.css'
 

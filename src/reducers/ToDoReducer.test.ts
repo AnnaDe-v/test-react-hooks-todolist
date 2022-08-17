@@ -1,6 +1,6 @@
 import {ToDoState} from "../ToDoState";
 import {TodoReducer} from "./todo-reducer";
-import {ADD_TO_DO_ITEM, AddToDoItemAC} from "../Actions";
+import {ADD_TO_DO_ITEM, AddToDoItemAC} from "./Actions";
 import {v4 as uuidv4} from 'uuid';
 
 let state: ToDoState;
@@ -11,17 +11,17 @@ test('Add new item success', () => {
         ToDoItems: [
             {
                 id: uuidv4(),
-                task: "ask",
+                text: "ask",
                 isDone: false
             },
             {
                 id: uuidv4(),
-                task: "wow",
+                text: "wow",
                 isDone: false
             },
             {
                 id: uuidv4(),
-                task: "buy",
+                text: "buy",
                 isDone: true
             },
         ]

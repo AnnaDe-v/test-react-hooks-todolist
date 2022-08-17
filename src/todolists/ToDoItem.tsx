@@ -1,24 +1,33 @@
 import React, {useContext} from 'react';
-import {ToDoItemType} from "../ToDoItemType";
+import {ToDoItemType} from "./ToDoItemType";
 import {ToDoContext} from "../reducers/todo-reducer";
-import {ToggleToDoItemAC} from "../Actions";
+import {RemoveToDoItemAC, ToggleToDoItemAC} from "../reducers/Actions";
 import style from "./ToDoList.module.css"
 
 const ToDoItem: React.FC<ToDoItemType> = (item:ToDoItemType) => {
     const {dispatch} = useContext(ToDoContext)
 
-    function DispatchToggleToDoItem() {
+    function ToggleToDoItem() {
         dispatch(ToggleToDoItemAC(item.id))
     }
 
+    function RemoveToDoItem() {
+        dispatch(RemoveToDoItemAC(item.id))
+    }
+
     return (
-        <li className={style['todo-item__task']}>
-                <input className={style['todo-item__checkbox']} type='checkbox' onChange={DispatchToggleToDoItem} checked={item.isDone}/>
-                <span className={item.isDone ? style['todo-item__task--done'] : style['todo-item__task--active']}
-                onClick={DispatchToggleToDoItem}>
-                    {item.task}
+        <>
+            <li className={style['todo-item__task']} >
+                <input className={style['todo-item__checkbox']} type='checkbox' onChange={ToggleToDoItem} checked={item.isDone}/>
+                <span onClick={ToggleToDoItem} style={{wordBreak: 'break-all'}}>
+                    {item.text}
                 </span>
-        </li>
+                <div onClick={RemoveToDoItem} style={{right: 10, position: "absolute", top: 10}}>X</div>
+            </li>
+
+        </>
+
+
     );
 };
 

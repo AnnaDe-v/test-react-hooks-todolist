@@ -1,5 +1,5 @@
 export interface ToDoItemType {
     id: string
-    task: string
+    text: string
     isDone: boolean
 }

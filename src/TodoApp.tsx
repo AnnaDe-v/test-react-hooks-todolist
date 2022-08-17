@@ -4,6 +4,7 @@ import ToDoInput from "./input/ToDoInput";
 import ToDoList from "./todolists/ToDoList";
 
 import './styles.css';
+import StatusTaskBar from "./StatusTaskBar";
 
 const TodoApp: React.FC = () => {
     // @ts-ignore
@@ -19,6 +20,7 @@ const TodoApp: React.FC = () => {
                 <h1 className="todos-title">ToDo List with React hooks</h1>
                 <ToDoInput/>
                 <ToDoList/>
+                <StatusTaskBar/>
             </div>
         </ToDoContext.Provider>
 

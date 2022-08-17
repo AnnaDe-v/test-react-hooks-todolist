@@ -6,10 +6,11 @@
 }
 
 .todo-item__task {
+    position: relative;
     background-color: #d2bebe;
     list-style-type: none;
     margin: 10px;
-    padding: 10px;
+    padding: 10px 30px 10px 10px;
     border-radius: 10px;
     font-size: 17px;
 }
@@ -23,6 +24,5 @@
 }
 
 .todo-item__task--active {
-
+    white-space: nowrap
 }
-

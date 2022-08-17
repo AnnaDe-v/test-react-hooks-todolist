@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {ToDoContext} from "../reducers/todo-reducer";
 import ToDoItem from './ToDoItem';
-import {ToDoItemType} from "../ToDoItemType";
+import {ToDoItemType} from "./ToDoItemType";
 
 import style from "./ToDoList.module.css"
 
@@ -13,7 +13,7 @@ const ToDoList: React.FC = () => {
         <div className={style['todolist-container']}>
             <ul className={style['todolist-list']}>
                 {state.ToDoItems.map((item: ToDoItemType, index: number) => (
-                    <ToDoItem key={index} id={item.id} task={item.task} isDone={item.isDone}/>
+                    <ToDoItem key={index} id={item.id} text={item.text} isDone={item.isDone}/>
                 ))}
             </ul>
         </div>
