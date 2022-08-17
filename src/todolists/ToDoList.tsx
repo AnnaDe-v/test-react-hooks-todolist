@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {ToDoContext} from "../reducers/todo-reducer";
 import ToDoItem from './ToDoItem';
 import {ToDoItemType} from "../ToDoItemType";
@@ -7,6 +7,7 @@ import style from "./ToDoList.module.css"
 
 const ToDoList: React.FC = () => {
     const {state} = useContext(ToDoContext)
+
 
     return (
         <div className={style['todolist-container']}>

@@ -7,6 +7,7 @@ import style from './ToDoInput.module.css'
 const ToDoInput: React.FC = () => {
     const [inputValue, updateInputValue] = useState('')
     const {dispatch} = useContext(ToDoContext)
+    const {state} = useContext(ToDoContext)
 
     function handleEditInputValue(e: React.ChangeEvent<HTMLInputElement>) {
         updateInputValue(e.target.value)
@@ -15,6 +16,9 @@ const ToDoInput: React.FC = () => {
     function addNewToDoItem() {
         if(inputValue) {
             dispatch(AddToDoItemAC(inputValue))
+
+            localStorage.setItem("localTodos", JSON.stringify(state));
+
             updateInputValue('')
         }
     }

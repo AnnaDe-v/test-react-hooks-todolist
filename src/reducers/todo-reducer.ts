@@ -8,6 +8,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 
+
+
 export const initialState: ToDoState = {
     ToDoItems: [
         {
@@ -17,6 +19,8 @@ export const initialState: ToDoState = {
         },
     ]
 }
+
+
 
 export const ToDoContext: React.Context<ToDoContextType> = React.createContext({
     state: initialState,
