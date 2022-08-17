@@ -1,14 +1,30 @@
 .to-do-input {
-    margin: auto;
-    max-width: 80%;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
 }
 
 .to-do-input__value {
-    width: 97%;
-    padding: 10px;
+    background: #d2aaf6;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    width: 100%;
+}
+
+.to-do-input__value:focus {
+    outline: none;
 }
 
 .to-do-input__button {
-    width: 3%;
-    height: 39px;
+    background: #16bdae;
+    border: 0;
+    border-radius: 7px;
+    color: white;
+    padding: 15px;
+    position: absolute;
+    right: 17px;
+    top: 17px;
 }

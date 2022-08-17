@@ -16,9 +16,7 @@ const ToDoInput: React.FC = () => {
     function addNewToDoItem() {
         if(inputValue) {
             dispatch(AddToDoItemAC(inputValue))
-
             localStorage.setItem("localTodos", JSON.stringify(state));
-
             updateInputValue('')
         }
     }
@@ -32,7 +30,8 @@ const ToDoInput: React.FC = () => {
 
 
     return (
-        <div className={style['to-do-input']}>
+        <>
+            <div className={style['to-do-input']}>
                 <input
                     type="text"
                     className={style['to-do-input__value']}
@@ -46,7 +45,10 @@ const ToDoInput: React.FC = () => {
                 >
                     +
                 </button>
-        </div>
+            </div>
+        </>
+
+
     );
 };
 
